@@ -1,0 +1,131 @@
+body {
+    background-color: #000000;
+}
+
+.back {
+    background-image: url(img/space.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    color: white;
+}
+
+.text1 {
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    font-size: 0.8em;
+    padding: 5px;
+    opacity: 0.8;
+}
+
+.btn-create,
+.btn-create:hover {
+    background-color: chocolate;
+    border: chocolate;
+    color: white;
+}
+
+.btn-print,
+.btn-print:hover {
+    color: white;
+    background-color: coral;
+    border: coral;
+}
+
+.btn-acelerate,
+.btn-acelerate:hover {
+    color: white;
+    background-color: orangered;
+    border: coral;
+}
+
+.btn-subtract,
+.btn-subtract:hover {
+    color: white;
+    background-color: orange;
+    border: orange;
+}
+
+.btn-create:hover,
+.btn-print:hover,
+.btn-acelerate:hover,
+.btn-subtract:hover {
+    opacity: 0.8;
+}
+
+.fa-rocket {
+    font-size: 110px;
+    font-family: fontawesome;
+    /* transform: rotate(-45deg); */
+    color: #FFF800;
+}
+
+.color-acelerate {
+    background: -webkit-linear-gradient(225deg, #44107A, #FF1361, #FFF800) 0% 0% / 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 2s ease 0s infinite normal none running fontgradient;
+    -webkit-animation: fontgradient 2s ease infinite;
+    -moz-animation: fontgradient 2s ease infinite;
+    animation: fontgradient 2s ease infinite;
+}
+
+@-webkit-keyframes fontgradient {
+    0% {
+        background-position: 0% 92%
+    }
+    50% {
+        background-position: 100% 9%
+    }
+    100% {
+        background-position: 0% 92%
+    }
+}
+
+@-moz-keyframes fontgradient {
+    0% {
+        background-position: 0% 92%
+    }
+    50% {
+        background-position: 100% 9%
+    }
+    100% {
+        background-position: 0% 92%
+    }
+}
+
+@keyframes fontgradient {
+    0% {
+        background-position: 0% 92%
+    }
+    50% {
+        background-position: 100% 9%
+    }
+    100% {
+        background-position: 0% 92%
+    }
+}
+
+.fa-rocket.no-display-rocket1,
+.fa-rocket.no-display-rocket2,
+.fa-rocket.no-display-rocketUser {
+    display: none;
+}
+
+.spaces {
+    height: 60px;
+}
+
+@media (max-width: 768px) {
+    .back {
+        background-size: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .back {
+        background-size: auto;
+    }
+}

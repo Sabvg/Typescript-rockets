@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockets</title>
+    <script src="../models/rocket.js"></script>
+    <script src="../models/thruster.js"></script>
+    <script src="../controllers/controller.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="back">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="mt-5">Create your Rocket</h3>
+                    <form id="rocketForm" class="mt-4">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="rocket">Code Rocket</label>
+                                <input id="codeRocket" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="thruster">Number of Thrusters</label>
+                                <input id="thruster" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="thruster">Power of Thrusters</label>
+                                <input id="powerThruster" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="row">
+                        <div class="col">
+                            <button id="createRocket" type="button" class="btn btn-secondary mb-4" onclick="createRocketUser()">Create Rocket</button>
+                            <button id="printRocket" type="button" class="btn btn-print mb-4" onclick="printRocketUser()">Print Rocket</button>
+                            <button id="acelerateRocket" type="button" class="btn btn-acelerate mb-4" onclick="acelerateRocketUser()">Acelerated Rocket</button>
+                            <button id="subtractRocket" type="button" class="btn btn-subtract mb-4" onclick="breakRocketUser()">Subtract Rocket</button>
+                        </div>
+                        <div class="col">
+                            <i id="rocketDraw-rocketUser" class="fas fa-rocket no-display-rocketUser mb-4"></i>
+                            <p id="rocketInfo"></p>
+                            <p id="rocketInfoUser"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-5">
+                    <div class="row">
+                        <div class="col">
+                            <button id="createRocket1" type="button" class="btn btn-create mb-4" onclick="createRocket1()">Create Rocket 1</button>
+                            <button id="printRocket1" type="button" class="btn btn-print mb-4" onclick="printRocket1()">Print Rocket 1 info</button>
+                            <button id="acelerateRocket1" type="button" class="btn btn-acelerate mb-4" onclick="acelerateRocket1()">Acelerated Rocket 1</button>
+                            <button id="subtractRocket1" type="button" class="btn btn-subtract mb-4" onclick="breakRocket1()">Subtract Rocket 1</button>
+                        </div>
+
+                        <div class="col">
+                            <p class="iconRocket"></p><i id="rocketDraw-rocket1" aria-hidden="true" class="fas fa-rocket no-display-rocket1"></i></p>
+                            <p id="rocketInfo1"></p>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="row">
+                        <div class="col">
+                            <button id="createRocket2" type="button" class="btn btn-create mb-4" onclick="createRocket2()">Create Rocket 2</button>
+                            <button id="printRocket2" type="button" class="btn btn-print mb-4" onclick="printRocket2()">Print Rocket 2 info</button>
+                            <button id="acelerateRocket2" type="button" class="btn btn-acelerate mb-4" onclick="acelerateRocket2()">Acelerated Rocket 2</button>
+                            <button id="subtractRocket2" type="button" class="btn btn-subtract mb-4" onclick="breakRocket2()">Subtract Rocket 2</button>
+                        </div>
+                        <div class="col">
+                            <i id="rocketDraw-rocket2" class="fas fa-rocket no-display-rocket2"></i>
+                            <p id="rocketInfo2"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
