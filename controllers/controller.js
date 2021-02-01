@@ -1,6 +1,5 @@
 "use strict";
 var rockets = new Array;
-//FASE 1 Y 2:
 var codeRocket1 = "32WESSDS";
 var codeRocket2 = "LDSFJA32";
 var thursterRocket1 = [10, 30, 80];
@@ -16,14 +15,14 @@ function createRocket(codeRocket, thrusterRocket) {
         i++;
     }
     if (codeRocket == codeRocket1) {
-        document.getElementById('rocketInfo1').innerHTML = "\n        Rocket 1 created:<br>Code: " + rocketEx.code + "<br> Number of Thrusters: " + i + " <br> Power of Thrusters: " + thrusterRocket;
+        document.getElementById('rocketInfo1').innerHTML = "\n        Rocket 1 created:<br>Code: " + rocketEx.code + "<br> Number of Thrusters: " + i + " <br>Max Power of Thrusters: " + thrusterRocket;
         rockets.push(rocketEx);
         console.log(rockets);
         console.log(rocketEx);
         (_a = document.getElementById('rocketDraw-rocket1')) === null || _a === void 0 ? void 0 : _a.classList.remove('no-display-rocket1');
     }
     else if (codeRocket == codeRocket2) {
-        document.getElementById('rocketInfo2').innerHTML = "\n        Rocket 2 created:<br>Code: " + rocketEx.code + "<br>Number of Thrusters: " + i + " <br>Power of Thrusters: " + thrusterRocket;
+        document.getElementById('rocketInfo2').innerHTML = "\n        Rocket 2 created:<br>Code: " + rocketEx.code + "<br>Number of Thrusters: " + i + " <br>Max Power of Thrusters: " + thrusterRocket;
         rockets.push(rocketEx);
         console.log(rockets);
         console.log(rocketEx);
@@ -177,15 +176,15 @@ function printRocket(codeRocket, thrusterRocket, powerRocket) {
     }
     if (codeRocket == codeRocket1) {
         document.getElementById('rocketInfo1').innerHTML =
-            "Rocket: " + codeRocket + " <br>Power of Thrusters: " + thrusterRocket + " <br> Inicial Power of Thursters: " + powerRocket + " <br>Total Power: " + sumPower;
+            "Rocket: " + codeRocket + " <br>Max Power of Thrusters: " + thrusterRocket + " <br> Power of Thursters: " + powerRocket + " <br>Total Power: " + sumPower;
     }
     else if (codeRocket == codeRocket2) {
         document.getElementById('rocketInfo2').innerHTML =
-            "Rocket: " + codeRocket + " <br>Power of Thrusters: " + thrusterRocket + " <br> Inicial Power of Thursters: " + powerRocket + " <br>Total Power: " + sumPower;
+            "Rocket: " + codeRocket + " <br>Max Power of Thrusters: " + thrusterRocket + " <br> Power of Thursters: " + powerRocket + " <br>Total Power: " + sumPower;
     }
     else {
         document.getElementById('rocketInfo').innerHTML =
-            "Rocket: " + codeRocket + " <br>Power of Thrusters: " + thrusterRocket + " <br> Inicial Power of Thursters: " + powerRocket + " <br>Total Power: " + sumPower;
+            "Rocket: " + codeRocket + " <br>Max Power of Thrusters: " + thrusterRocket + " <br>Power of Thursters: " + powerRocket + " <br>Total Power: " + sumPower;
     }
 }
 function printRocket1() {
