@@ -19,6 +19,17 @@ body {
     opacity: 0.8;
 }
 
+.btn {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.row.space {
+    margin-top: 40px;
+}
+
 .btn-create,
 .btn-create:hover {
     background-color: chocolate;
@@ -114,13 +125,18 @@ body {
     display: none;
 }
 
-.spaces {
-    height: 60px;
+@media (max-width: 992px) {
+    .btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
     .back {
         background-size: auto;
+    }
+    .btn {
+        width: 100%;
     }
 }
 
