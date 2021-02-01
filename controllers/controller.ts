@@ -1,6 +1,5 @@
 let rockets: Rocket[] = new Array;
 
-//FASE 1 Y 2:
 let codeRocket1 = "32WESSDS";
 let codeRocket2 = "LDSFJA32";
 
@@ -22,7 +21,7 @@ function createRocket(codeRocket:string, thrusterRocket:number[]) {
     
     if(codeRocket == codeRocket1) {
         (<HTMLInputElement>document.getElementById('rocketInfo1')).innerHTML=`
-        Rocket 1 created:<br>Code: ${rocketEx.code}<br> Number of Thrusters: ${i} <br> Power of Thrusters: ${thrusterRocket}`
+        Rocket 1 created:<br>Code: ${rocketEx.code}<br> Number of Thrusters: ${i} <br>Max Power of Thrusters: ${thrusterRocket}`
         rockets.push(rocketEx);
         console.log(rockets);
         console.log(rocketEx);
@@ -31,7 +30,7 @@ function createRocket(codeRocket:string, thrusterRocket:number[]) {
         
     } else if(codeRocket == codeRocket2) {
         (<HTMLInputElement>document.getElementById('rocketInfo2')).innerHTML=`
-        Rocket 2 created:<br>Code: ${rocketEx.code}<br>Number of Thrusters: ${i} <br>Power of Thrusters: ${thrusterRocket}`
+        Rocket 2 created:<br>Code: ${rocketEx.code}<br>Number of Thrusters: ${i} <br>Max Power of Thrusters: ${thrusterRocket}`
         rockets.push(rocketEx);
         console.log(rockets);
         console.log(rocketEx);
@@ -213,16 +212,16 @@ function printRocket(codeRocket:string, thrusterRocket:number[], powerRocket:num
     if(codeRocket == codeRocket1) {
 
         (<HTMLInputElement>document.getElementById('rocketInfo1')).innerHTML=
-        `Rocket: ${codeRocket} <br>Power of Thrusters: ${thrusterRocket} <br> Inicial Power of Thursters: ${powerRocket} <br>Total Power: ${sumPower}`;  
+        `Rocket: ${codeRocket} <br>Max Power of Thrusters: ${thrusterRocket} <br> Power of Thursters: ${powerRocket} <br>Total Power: ${sumPower}`;  
 
     } else if(codeRocket == codeRocket2) {
         (<HTMLInputElement>document.getElementById('rocketInfo2')).innerHTML=
-        `Rocket: ${codeRocket} <br>Power of Thrusters: ${thrusterRocket} <br> Inicial Power of Thursters: ${powerRocket} <br>Total Power: ${sumPower}`; 
+        `Rocket: ${codeRocket} <br>Max Power of Thrusters: ${thrusterRocket} <br> Power of Thursters: ${powerRocket} <br>Total Power: ${sumPower}`; 
 
         
     } else {
         (<HTMLInputElement>document.getElementById('rocketInfo')).innerHTML=
-        `Rocket: ${codeRocket} <br>Power of Thrusters: ${thrusterRocket} <br> Inicial Power of Thursters: ${powerRocket} <br>Total Power: ${sumPower}`; 
+        `Rocket: ${codeRocket} <br>Max Power of Thrusters: ${thrusterRocket} <br>Power of Thursters: ${powerRocket} <br>Total Power: ${sumPower}`; 
     }
 }
 
