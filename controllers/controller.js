@@ -56,7 +56,7 @@ function createRocketUser() {
         }
     }
     //me falla la validación del último if powerThursters
-    if (code == "" || isNaN(numThrusters) || powerThursters == [""]) {
+    if (code == "" || isNaN(numThrusters) || powerThursters == [""] || !validateRocket(code)) {
         if (code == "") {
             acumError++;
             alert('Code Rocket field must be filled.');
@@ -90,7 +90,7 @@ function createRocketUser() {
         }
         rocketUser.setInicialPower(powerThurstersOpt);
     }
-    document.getElementById('rocketInfo').innerHTML = "\n    Your Rocket created:<br> Code: " + rocketUser.code + " <br> Number of Thrusters: " + powerThurstersOpt.length + " ";
+    document.getElementById('rocketInfo').innerHTML = "\n    Your Rocket created:<br> Code: " + rocketUser.code + " <br> Number of Thrusters: " + powerThurstersOpt.length;
     (_a = document.getElementById('rocketDraw-rocketUser')) === null || _a === void 0 ? void 0 : _a.classList.remove('no-display-rocketUser');
 }
 function acelerateRocket(codeRocket, thrusterRocket, powerRocket) {
@@ -98,6 +98,10 @@ function acelerateRocket(codeRocket, thrusterRocket, powerRocket) {
     while (thrusterRocket[i] != undefined) {
         if (powerRocket[i] == thrusterRocket[i]) {
             powerRocket[i] = powerRocket[i];
+        }
+        else if (powerRocket[i] >= thrusterRocket[i]) {
+            powerRocket[i] = thrusterRocket[i];
+            console.log('Has llegado a la potencia máxima del propulsor ' + i);
         }
         else {
             powerRocket[i] = powerRocket[i] + 10;
