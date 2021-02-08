@@ -129,6 +129,9 @@ body {
     .btn {
         width: 100%;
     }
+    .col {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
